@@ -1,0 +1,145 @@
+// Copyright (c) Microsoft Corporation.
+// SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+// This named module expects to be built with classic headers, not header units.
+#define _BUILD_STD_MODULE
+
+module;
+
+// The subset of "C headers" [tab:c.headers] corresponding to
+// the "C++ headers for C library facilities" [tab:headers.cpp.c]
+#include <assert.h>
+#include <ctype.h>
+#include <errno.h>
+#include <fenv.h>
+#include <float.h>
+#include <inttypes.h>
+#include <limits.h>
+#include <locale.h>
+#include <math.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <uchar.h>
+#include <wchar.h>
+#include <wctype.h>
+
+export module std;
+
+#pragma warning(push)
+#pragma warning(disable : 5244) // '#include <meow>' in the purview of module 'std' appears erroneous.
+
+// "C++ library headers" [tab:headers.cpp]
+import <algorithm>;
+#if _HAS_STATIC_RTTI
+//import <any>;
+#endif // _HAS_STATIC_RTTI
+import <array>;
+import <atomic>;
+import <barrier>;
+import <bit>;
+import <bitset>;
+import <charconv>;
+import <chrono>;
+import <codecvt>;
+import <compare>;
+import <complex>;
+import <concepts>;
+import <condition_variable>;
+import <coroutine>;
+import <deque>;
+import <exception>;
+import <execution>;
+import <expected>;
+import <filesystem>;
+import <format>;
+import <forward_list>;
+import <fstream>;
+import <functional>;
+import <future>;
+import <initializer_list>;
+import <iomanip>;
+import <ios>;
+import <iosfwd>;
+import <iostream>;
+import <istream>;
+import <iterator>;
+import <latch>;
+import <limits>;
+import <list>;
+import <locale>;
+import <map>;
+import <memory>;
+import <memory_resource>;
+import <mutex>;
+import <new>;
+import <numbers>;
+import <numeric>;
+import <optional>;
+import <ostream>;
+import <queue>;
+import <random>;
+import <ranges>;
+import <ratio>;
+import <regex>;
+import <scoped_allocator>;
+import <semaphore>;
+import <set>;
+import <shared_mutex>;
+import <source_location>;
+import <span>;
+import <spanstream>;
+import <sstream>;
+import <stack>;
+import <stacktrace>;
+import <stdexcept>;
+import <stop_token>;
+import <streambuf>;
+import <string>;
+import <string_view>;
+import <strstream>;
+import <syncstream>;
+import <system_error>;
+import <thread>;
+import <tuple>;
+import <type_traits>;
+import <typeindex>;
+import <typeinfo>;
+import <unordered_map>;
+import <unordered_set>;
+import <utility>;
+import <valarray>;
+import <variant>;
+import <vector>;
+import <version>;
+
+// "C++ headers for C library facilities" [tab:headers.cpp.c]
+import <cassert>;
+import <cctype>;
+import <cerrno>;
+import <cfenv>;
+import <cfloat>;
+import <cinttypes>;
+import <climits>;
+import <clocale>;
+import <cmath>;
+import <csetjmp>;
+import <csignal>;
+import <cstdarg>;
+import <cstddef>;
+import <cstdint>;
+import <cstdio>;
+import <cstdlib>;
+import <cstring>;
+import <ctime>;
+import <cuchar>;
+import <cwchar>;
+import <cwctype>;
+
+#pragma warning(pop)

@@ -1,0 +1,15 @@
+[submodule "external/imgui"]
+	path = external/imgui
+	url = git@github.com:ocornut/imgui.git
+[submodule "external/entt"]
+	path = external/entt
+	url = git@github.com:skypjack/entt.git
+[submodule "external/tracy"]
+	path = external/tracy
+	url = git@github.com:wolfpld/tracy.git
+[submodule "external/capnproto"]
+	path = external/capnproto
+	url = git@github.com:capnproto/capnproto.git
+[submodule "external/spdlog"]
+	path = external/spdlog
+	url = git@github.com:gabime/spdlog.git
